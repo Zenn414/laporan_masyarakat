@@ -343,6 +343,9 @@ background-color: #0084FF;
         .hero h1{
             font-size: 4rem;
         }
+    .hero{
+        height: 50vh;
+    }
     .hero h3{
         font-size: 1.6rem ;
         color: white !important;
