@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Macondo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap');
 
 :root{
-    --main-color:#2563EB;
-    --second-color:#0643CA;
+    --main-color:#1d263b;
+    --second-color:#3FA9FF;
     --font-color:#504A4A;
     --font-header:3.2rem;
 }
@@ -38,7 +38,7 @@ html{
 }
 .button{
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 1.2rem 3rem;
     font-size: 1.6rem;
     font-weight: bold;  
@@ -50,12 +50,13 @@ html{
 /* Hero */
 .hero{
     background:
-    linear-gradient(
+    /* linear-gradient(
       to bottom,
       rgba(13,110,253,0.85) 10%,
       rgba(13,110,253,0.35) 70%,
       rgba(13,110,253,0) 85%
-    ),url(img/kota-bekasi2.png);
+    ), */
+    url(img/kota-bekasi2.png);
     width: 100%;
     height: 80vh;
     background-position: center 45%;
@@ -63,7 +64,7 @@ html{
     background-size: cover;
     position: relative;
 }
-.hero::after{
+/* .hero::after{
     position: absolute;
     top: 0;
     left: 0;
@@ -74,14 +75,28 @@ html{
     to top,
     rgba(255, 255, 255, 0.40),
     rgba(255, 255, 255, 0)
-  );
-}
+  ); 
+} */
+ .hero::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 10%;
+ }
 .hero h1{
-    font-size: 5.5rem;
+    font-size: 4.5rem;
 }
 .hero h1,
 .hero h3{
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.60);
+}
+.hero img{
+    width: 38rem;
+    height: 35rem;
 }
 /* About me */
 .about-me{
@@ -113,8 +128,29 @@ hr{
 }
 /* Section-3 */
 .section-3{
-    height: auto;
+    height: 100%;
+    background-image: url('/img/Desain\ tanpa\ judul1.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    
 }
+.section-3>*{
+    position: relative;
+    z-index: 1;
+}
+/* .section-3::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 30rem;
+    background-size: cover;
+    background-image: url('img/overlay.jpg');
+} */
 .section-3 h2,
 .section-3 p{
     color: var(--font-color);
@@ -130,7 +166,6 @@ hr{
 .section-3 button{
     background-color: var(--main-color);
     border: none;
-    border-radius: 12px;
     padding: 1.2rem 4rem;
     font-size: 1.8rem;
     font-weight: bold;
@@ -139,26 +174,38 @@ hr{
 .section-3 button:hover{
     background-color: #dc3545;
 }
-
-.sec-float{
-    background-color: white;
-    height: 20vh;
-}
 /* Sectio 4 */
-.section-4{
+.section-5{
     background-color: var(--main-color);
     height: auto;
     width: 100%;                            
 }
-.section-4 .cont1{
-    background-color: white;
-    position: relative;
-    top: -150px;
-    min-height: 35rem;
-    color: var(--font-color);
+.section-4{
+    background-image: url('img/Desain\ tanpa\ judul7.png');
+    width: 100%;
+    height: 100%;
+    background-position: center 90%;
+    
 }
-.section-4 i{
-    font-size: 5.6rem;
+.section-4 .cont1{
+    border-radius: 20px;
+    border: 2px solid rgb(248, 126, 12);
+    background: transparent;
+}
+.section-4 img{
+    width: 8rem;
+}
+.section-4 .img-icon{
+    width: 7rem;
+    height: 7rem;
+}
+.section-5{
+     background-image: url('img/Desain\ tanpa\ judul6.png');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:right;
 }
 .box{
     display: flex;
@@ -176,7 +223,7 @@ hr{
     background-color: white;
     position: relative;
     z-index: 1;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.60);
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.6);
 }
 .number.active{
     background-color: var(--second-color);
@@ -194,9 +241,10 @@ hr{
 .box p{
     font-size: 2rem;
     font-weight: bold;
-    color: white;
+    color: var(--main-color);
     padding-top: 1.6rem;
     text-align: center;
+
 }
 .step-wrapper{
     position: relative;
@@ -205,7 +253,7 @@ hr{
 .step-wrapper::before{
     content: '';
     position: absolute;
-    background-color: white;
+    background-color: var(--main-color);
     height: 3px;
     top: 40%;
     transform: translateY(-50%);
@@ -214,7 +262,7 @@ hr{
     z-index: 0;
 }
 .next a{
-    
+    color: var(--main-color) !important;
     font-size: 1.2rem;
 }
 
@@ -226,7 +274,7 @@ hr{
 
 /* Mengatur tombol close agar berada di atas gambar */
 .footer{
-    background-color: var(--second-color);
+    background-color: var(--main-color);
 }
 
 .footer ul li,
@@ -290,18 +338,18 @@ background-color: #0084FF;
     }
 }
 @media screen and (max-width:767px){
+
     
     html{
         font-size: 55%;
     }
-    
+    .hero img{
+    width: 22rem;
+    height: 20rem;
+    }
     .hero h1{
         font-size: 5rem;
     }
-   .section-4 .cont1{
-    position: relative;
-    top: -100px;
-   }
     
    
    .section-3 img{
@@ -343,26 +391,23 @@ background-color: #0084FF;
 }
 @media screen and (max-width:576px){
     html{
-        font-size: 45%;}
+        font-size: 50%;}
         .hero h1{
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
     .hero{
-        height: 50vh;
+        height: 40vh;
     }
     .hero h3{
         font-size: 1.6rem ;
         color: white !important;
     }
-    .section-4 .cont1 {
-    position: relative;
-    top: -100px;
-    min-height: auto;
-    padding: 2rem !important;
+    
   }
   .box p{
     font-size: 2.2rem;
   }
+  
   .footer ul li,
 .footer p{
     font-size: 2rem;
@@ -370,4 +415,4 @@ background-color: #0084FF;
     
 }
 
-}
+
