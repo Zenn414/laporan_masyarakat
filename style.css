@@ -20,11 +20,11 @@ html{
 .navbar{
     background-color: var(--main-color) !important;
     color: white !important;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .navbar .logo{
-    width: 7.5rem;
-    height: 6rem;
+    width: 9rem;
+    height: 7rem;
     object-fit: contain;
 }
 /* Login */
@@ -39,8 +39,8 @@ html{
 .button{
     border: none;
     border-radius: 12px;
-    padding: 0.8rem 2.6rem;
-    font-size: 1.2rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
     font-weight: bold;  
 }
 .btn-signin{
@@ -131,9 +131,13 @@ hr{
     background-color: var(--main-color);
     border: none;
     border-radius: 12px;
-    padding: 0.8rem 3.8rem;
-    font-size: 1.6rem;
-    font-weight: bold;  
+    padding: 1.2rem 4rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: all .2s ease-in;  
+}
+.section-3 button:hover{
+    background-color: #dc3545;
 }
 
 .sec-float{
@@ -359,5 +363,11 @@ background-color: #0084FF;
   .box p{
     font-size: 2.2rem;
   }
+  .footer ul li,
+.footer p{
+    font-size: 2rem;
+    list-style: none;
+    
+}
 
 }
