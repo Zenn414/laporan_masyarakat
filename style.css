@@ -65,6 +65,25 @@ html{
     background-size: cover;
     position: relative;
 }
+.hero>*{
+    position: relative;
+    z-index: 2;
+}
+ /* .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    #040e2f 0%,
+    rgba(4,14,47,0.9) 2%,
+    rgba(4,14,47,0.4) 5%,
+    transparent 100%
+  );
+
+  z-index: 1;
+} */
 /* .hero::after{
     position: absolute;
     top: 0;
@@ -78,7 +97,7 @@ html{
     rgba(255, 255, 255, 0)
   ); 
 } */
- .hero::after{
+ /* .hero::after{
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +106,7 @@ html{
     height: 100%;
     background-color: #000;
     opacity: 10%;
- }
+ } */
 .hero h1{
     font-size: 4.5rem;
 }
@@ -103,6 +122,12 @@ html{
 /* About me */
 .about-me{
     background-color: var(--main-color);
+    
+    /* background: url('img/Desain\ tanpa\ judul10.png');
+     background-size: cover;
+  background-position: center;
+
+  background-attachment: fixed; /* 🔥 ini kuncinya */
     height: auto;
     width: 100%;
     padding: 7rem 2rem;
@@ -325,6 +350,9 @@ background-color: var(--second-color);
     .hero h1{
         font-size: 4rem;
     }
+     .hero{
+        height: 60vh;
+    }
     .section-3 img{
     width: 30rem;
     
@@ -351,8 +379,9 @@ background-color: var(--second-color);
     height: 20rem;
     }
     .hero h1{
-        font-size: 5rem;
+        font-size: 4rem;
     }
+   
     
    
    .section-3 img{
