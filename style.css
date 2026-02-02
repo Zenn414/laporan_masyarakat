@@ -6,6 +6,7 @@
     --font-color:#504A4A;
     --font-header:3.2rem;
 }
+
 *{
     padding: 0;
     margin: 0;
@@ -95,8 +96,9 @@ html{
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.60);
 }
 .hero img{
-    width: 38rem;
-    height: 35rem;
+    width: 42rem;
+    height: 39rem;
+    
 }
 /* About me */
 .about-me{
@@ -176,9 +178,7 @@ hr{
 }
 /* Sectio 4 */
 .section-5{
-    background-color: var(--main-color);
-    height: auto;
-    width: 100%;                            
+                               
 }
 .section-4{
     background-image: url('img/Desain\ tanpa\ judul7.png');
@@ -202,10 +202,10 @@ hr{
 .section-5{
      background-image: url('img/Desain\ tanpa\ judul6.png');
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:right;
+    background-position:right 70%;
 }
 .box{
     display: flex;
@@ -305,7 +305,7 @@ hr{
 }
 /* Tag */
 .tag{
-background-color: #0084FF;
+background-color: var(--second-color);
 }
 .tag p{
     font-size: 1.6rem;
@@ -321,6 +321,9 @@ background-color: #0084FF;
 @media screen and (max-width:992px){
     html{
         font-size: 60%;
+    }
+    .hero h1{
+        font-size: 4rem;
     }
     .section-3 img{
     width: 30rem;
@@ -354,7 +357,7 @@ background-color: #0084FF;
    
    .section-3 img{
     width: 30rem;
-    height: 25rem;
+    height: 30rem;
    }
    .number{
     width: 12rem;
@@ -403,6 +406,10 @@ background-color: #0084FF;
         color: white !important;
     }
     
+  }
+  .button{
+    padding: 0.8rem 2.6rem;
+    font-size: 1.4rem;
   }
   .box p{
     font-size: 2.2rem;
