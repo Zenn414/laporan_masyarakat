@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Bostrap -->
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+    <style>
+        :root{
+            --main-color:#1d263b;
+            --second-color:#3FA9FF;
+            --font-color:#2563EB;
+            --font-header:3.2rem;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: 1px  red;
+        }
+        .form-img{
+            border: 2px dashed white;
+            border-radius: 10px;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+        .form-img input[type='file']{
+            display: none;
+        }
+        .wrapper-input{
+            
+        }
+        .wrapper-output{
+            background-color: var(--main-color);
+            width: 100%;
+        }
+        h4{
+            cursor: pointer;
+        }
+        i{
+            cursor: pointer;
+        }
+        .icon-nav{
+            font-size: 20px;
+            width: 100%;
+        }
+    </style>
+<body class="bg-light" >
+    <div class="nav bg-primary p-4 mb-3 text-light d-flex justify-content-between" style="width:100%">
+        <h4 class=""> <i class="bi bi-arrow-bar-left me-1 .icon-nav"></i>Kembali</h4>
+        <h4><i class="bi bi-info-circle me-2 .icon-nav"></i>Panduan</h4>
+    </div>
+    
+        <div class="row g-0 p-2">
+         <div class="col-md-6" >
+            <div class="wrapper-input p-4 rounded bg-primary text-light" style="min-width: 320px;">
+                 <h2 class="fw-bold mb-4 text-light text-center">BUAT LAPORAN</h2>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Judul Laporan</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ketik Judul Laporan Anda">
+        </div>
+         <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Kategori Laporan</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Pilih Kategori Laporan Anda">
+        </div>
+        <div class="d-flex  gap-2">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Lokasi Kejadian</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Input Lokasi Kejadian">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">TanggaL Kejadian</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Input Tanggal Kejadian">
+            </div>
+        </div>
+         <div class="mb-3">
+            <label class="form-img">Choose your file
+                <input type="file" id="formFile">
+            </label>
+         </div>
+        <div class="mb-3" id="textImg">
+            <!-- <p id=""></p>
+            <i id="removeBtn" class="bi bi-x"></i> -->
+        </div>
+            
+       
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Keluhan</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button class="btn bg-light">Buat Laporan</button>
+        </div>
+            </div>
+       
+         <div class="col-md-6 col-12 form-output d-flex flex-column align-items-center justify-content-center p-4 " >
+            <h1 class="text-center mb-3">Jumlah Laporan Saat Ini</h1>
+            <div class="wrapper-output d-flex justify-content-center align-items-center text-light rounded p-3" >
+                 <h1>221</h1>
+            </div>
+           
+        </div>
+
+    </div>
+    </div>
+    
+   
+   
+            
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const img=document.getElementById('formFile');
+        const textImg=document.getElementById('textImg');
+    
+        img.addEventListener("change", ()=>{
+            const file=img.files[0];
+            textImg.innerHTML+=`<div class="mb-3 d-flex justify-content-between align-items-center "><p id="">${file.name}</p>
+            <i id="removeBtn" class="bi bi-x"></i> </div>`;
+
+             const removeBtn=document.getElementById('removeBtn');
+            removeBtn.addEventListener('click', (e)=>{
+            e.target.parentElement.remove();
+        })
+        })
+       
+
+    </script>
+</body>
+</html>
